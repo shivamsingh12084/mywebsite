@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Local
-    'accounts'
+    'accounts',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,10 @@ ROOT_URLCONF = 'cofing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # Organising all templates at one place 
+        # It is more easier to manage
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
